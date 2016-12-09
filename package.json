@@ -2,7 +2,8 @@
   "name": "Angular2Spa",
   "version": "0.0.0",
   "scripts": {
-    "test": "karma start ClientApp/test/karma.conf.js"
+    "test": "karma start ClientApp/test/karma.conf.js",
+    "coverage": "npm test && http-server -c-1 -o -p 9875 ClientApp/test/coverage"
   },
   "dependencies": {
     "@angular/common": "2.0.2",
@@ -51,12 +52,15 @@
     "@types/chai": "^3.4.34",
     "@types/jasmine": "^2.5.37",
     "chai": "^3.5.0",
+    "http-server": "^0.9.0",
     "jasmine-core": "^2.5.2",
     "karma": "^1.3.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.0.2",
-    "karma-webpack": "^1.8.0"
+    "karma-remap-istanbul": "^0.2.1",
+    "karma-webpack": "^1.8.0",
+    "sourcemap-istanbul-instrumenter-loader": "^0.2.0"
   }
 }
